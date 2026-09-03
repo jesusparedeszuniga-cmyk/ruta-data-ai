@@ -44,3 +44,11 @@ lo contrario es ambigüedad, y que MySQL lo permita no significa que sea correct
 > Revisar al cierre de cada fase. Si tres errores distintos apuntan al mismo hueco de fondo, ese hueco necesita un bloque de estudio propio, no otro parche.
 
 -
+### [09-02] Mes 1 — El prompt muestra el nombre de la carpeta, no la ruta
+**Qué creía:** que si el prompt dice `ruta-data-ai` estoy en mi repo.
+**Qué es en realidad:** el prompt solo muestra el último tramo de la ruta.
+Dos carpetas distintas con el mismo nombre se ven idénticas. La ubicación
+real solo la da `pwd`, y el `fatal: not a git repository` es la señal de
+que estoy fuera del repo, no de que Git esté roto.
+**Dónde apareció:** moviendo los archivos de tracking al repo, día 1.
+**Estado:** ◐ abierto
