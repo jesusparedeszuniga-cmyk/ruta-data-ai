@@ -22,18 +22,24 @@
 
 ## Abiertos
 
-<!-- ejemplo, borrar cuando tengas los tuyos
+## Abiertos
 
-### [09-14] Mes 1 — GROUP BY vs. agregación implícita
-**Qué creía:** que podía poner cualquier columna en el SELECT junto a un COUNT().
-**Qué es en realidad:** toda columna del SELECT que no esté agregada debe estar en el GROUP BY;
-lo contrario es ambigüedad, y que MySQL lo permita no significa que sea correcto.
-**Dónde apareció:** revisión del Proyecto 0.
+### [09-02] Mes 1 — El espacio es un separador de argumentos en el shell
+**Qué creía:** que un nombre de carpeta se escribe tal cual se ve en el Finder.
+**Qué es en realidad:** el shell parte la línea por los espacios y trata cada
+fragmento como un argumento distinto. Un nombre con espacios hay que escaparlo
+o entrecomillarlo, o el comando recibe argumentos que no existen.
+**Dónde apareció:** navegando al repo el día 1.
 **Estado:** ◐ abierto
 
--->
-
----
+### [09-02] Mes 1 — El prompt muestra el nombre de la carpeta, no la ruta
+**Qué creía:** que si el prompt dice `ruta-data-ai` estoy en mi repo.
+**Qué es en realidad:** el prompt solo muestra el último tramo de la ruta.
+Dos carpetas distintas con el mismo nombre se ven idénticas. La ubicación
+real solo la da `pwd`, y el `fatal: not a git repository` es la señal de
+que estoy fuera del repo, no de que Git esté roto.
+**Dónde apareció:** moviendo los archivos de tracking al repo, día 1.
+**Estado:** ◐ abierto
 
 ## Resueltos
 
@@ -44,11 +50,3 @@ lo contrario es ambigüedad, y que MySQL lo permita no significa que sea correct
 > Revisar al cierre de cada fase. Si tres errores distintos apuntan al mismo hueco de fondo, ese hueco necesita un bloque de estudio propio, no otro parche.
 
 -
-### [09-02] Mes 1 — El prompt muestra el nombre de la carpeta, no la ruta
-**Qué creía:** que si el prompt dice `ruta-data-ai` estoy en mi repo.
-**Qué es en realidad:** el prompt solo muestra el último tramo de la ruta.
-Dos carpetas distintas con el mismo nombre se ven idénticas. La ubicación
-real solo la da `pwd`, y el `fatal: not a git repository` es la señal de
-que estoy fuera del repo, no de que Git esté roto.
-**Dónde apareció:** moviendo los archivos de tracking al repo, día 1.
-**Estado:** ◐ abierto
