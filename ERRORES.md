@@ -41,12 +41,58 @@ que estoy fuera del repo, no de que Git esté roto.
 **Dónde apareció:** moviendo los archivos de tracking al repo, día 1.
 **Estado:** ◐ abierto
 
+### [09-03] Mes 1 — Los métodos de string devuelven, no modifican
+**Qué creía:** que llamar a `.replace()` sobre una variable cambiaba esa variable.
+**Qué es en realidad:** las cadenas en Python son inmutables. Los métodos de
+string devuelven una cadena nueva y dejan la original intacta. Si no asigno el
+resultado o no lo uso ahí mismo, el cálculo se descarta en silencio: no hay error,
+simplemente no pasa nada.
+**Dónde apareció:** Making Faces, pset 0.
+**Estado:** ◐ abierto
+
+### [09-03] Mes 1 — Asignar dentro de una función no la hace devolver
+**Qué creía:** que si guardaba el resultado en una variable dentro de la función,
+quien la llamó recibiría ese valor.
+**Qué es en realidad:** las variables locales mueren al terminar la función. La
+única forma de entregar un valor a quien llamó es `return`. Sin él, la función
+devuelve `None` aunque haya calculado correctamente.
+**Dónde apareció:** Tip Calculator, pset 0. Segunda vez en el mismo pset.
+**Estado:** ◐ abierto
+
+### [09-06] Mes 1 — División entera en SQL trunca el resultado
+**Qué creía:** que dividir dos columnas y multiplicar por 100 me daba el porcentaje.
+**Qué es en realidad:** si ambos operandos son enteros, la división descarta la
+parte decimal antes de seguir operando. Hay que convertir a decimal antes de
+dividir, o reordenar la operación. Multiplicar después no recupera lo perdido.
+**Dónde apareció:** Mode Basic SQL, ejercicio de porcentajes por región.
+**Estado:** ◐ abierto
+
+### [09-06] Mes 1 — Nombrar variables como funciones incorporadas las oculta
+**Qué creía:** que `bool`, `list`, `str`, `type` eran palabras libres para usar como
+nombres de variable.
+**Qué es en realidad:** son funciones incorporadas de Python. Asignarles un valor
+las sobrescribe dentro de ese ámbito y dejan de estar disponibles. Python no avisa;
+el error aparece después, cuando intento usarlas como función.
+**Dónde apareció:** ejercicio de tipos, mes 1.
+**Estado:** ◐ abierto
+
+### [09-06] Mes 1 — Los paréntesis significan llamar, y solo van sobre funciones
+**Qué creía:** que los paréntesis eran parte del nombre o decoración de la sintaxis.
+**Qué es en realidad:** `nombre(...)` ejecuta una función. Sobre una variable da
+TypeError; sobre una función sin ellos obtengo la función misma, no su resultado.
+Las llaves de un f-string marcan dónde va un valor, no llaman a nada.
+**Dónde apareció:** discount.py, mes 1.
+**Estado:** ◐ abierto
+
 ## Resueltos
 
 ---
 
 ## Patrones recurrentes
 
-> Revisar al cierre de cada fase. Si tres errores distintos apuntan al mismo hueco de fondo, ese hueco necesita un bloque de estudio propio, no otro parche.
+>- **Calcular no es entregar.** Cuatro entradas distintas (métodos de string, asignar
+  vs. devolver, paréntesis de llamada, y en parte los builtins) son variantes de lo
+  mismo: una expresión que produce un valor lo pierde si nadie lo recoge con `=` o
+  con `return`. Python no avisa. Revisar en el quiz del cierre de mes 1.
 
 -

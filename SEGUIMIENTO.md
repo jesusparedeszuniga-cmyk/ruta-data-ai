@@ -83,12 +83,14 @@ Estados: ☐ no iniciado · ◐ en curso · ⊗ bloqueado · ✔ entregado y rev
 `Horas: ___/90` · `Inicio: ____` · `Fin: ____`
 - [ ] **Python 60%** — CS50P: variables, tipos, strings, listas, diccionarios, condicionales, loops, funciones, excepciones, archivos, debugging
 - [ ] **SQL 30%** — Mode Analytics + SQLZoo: SELECT, WHERE, GROUP BY, HAVING, JOINs, agregaciones, alias, NULLs
-- [ ] **Git 10%** — repos, commits, .gitignore, README, GitHub
+- [X] **Git 10%** — repos, commits, .gitignore, README, GitHub
 - [ ] 📦 **Proyecto 0 — Personal Finance Analyzer** (CSV → Python y CSV → PostgreSQL, mismas respuestas por dos caminos)
 - [ ] ➕ **Problemática de investigación** — 1 página: problema real, con dueño y con costo. Guardar en el repo y releer al cierre de cada fase.
 - [ ] 💰 Crear `VALOR.md`. Registrar retroactivamente lo que ya hiciste en el trabajo (automatizaciones de Zapier/n8n, reportes, integraciones) con horas ahorradas estimadas
 - [ ] 💰 Averiguar el ciclo de presupuesto y de evaluación de desempeño del despacho. La conversación de aumento se agenda contra ese calendario, no contra el mes 9
 - [ ] Revisión de tutor cerrada
+
+"arranque martes; semana 1 en setup de entorno y terminal".
 
 ### Mes 2 — Python intermedio + SQL avanzado
 `Horas: ___/90` · `Inicio: ____` · `Fin: ____`

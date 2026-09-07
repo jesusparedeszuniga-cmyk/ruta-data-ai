@@ -6,7 +6,6 @@ def main():
     final_price = apply_discount(converted_text,converted_number)
     print(f"S/ {final_price:.2f}")
 
-
 def dollars_to_float(text):
     return float(text.replace("S/","").strip())
 
