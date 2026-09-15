@@ -10,6 +10,8 @@ Regla dura del plan: **no avanzas de fase sin haber entregado sus proyectos.** L
 **Objetivo de la ruta:** aprender y aumentar ingresos con lo aprendido. No es preparación para ningún programa académico; si eso aparece después, se decide después.
 
 > 💰 **Track de ingresos — corre desde el mes 1.** Detalle completo en `TRACK_INGRESOS.md`. Cada mes tiene una línea 💰: no es estudio adicional, es documentar lo que ya haces. La numeración de los meses se mantiene igual que en el plan; el hito va entre el mes 8 y el mes 9 como bloque sin número.
+>
+> ⚠️ **Actualización 2026-09-13:** el ciclo de evaluación del despacho está fijado por contrato en **noviembre de 2026**, al cumplir el año de antigüedad. El disparador del hito de ingresos es esa fecha, no el mes 8. Ver el bloque del hito más abajo.
 
 ---
 
@@ -41,7 +43,7 @@ Estados: ☐ no iniciado · ◐ en curso · ⊗ bloqueado · ✔ entregado y rev
 
 | Mes | Objetivo | Reales | Δ | Notas |
 |---|---|---|---|---|
-| 1 | 90 | | | |
+| 1 | 90 | 36 (parcial, S1-S2) | −3 | S1 14h vs 18 obj. (−4) · S2 ~22h **estimadas** vs 21 obj. (+1) · déficit acumulado −3h → **no aplica Regla 9**, nada se recorta · Proyecto 0, problemática y JOINs/NULLs se arrastran a S3 · 💰 ciclo de presupuesto cerrado: noviembre |
 | 2 | 90 | | | |
 | 3 | 90 | | | |
 | 4 | 90 | | | |
@@ -49,7 +51,7 @@ Estados: ☐ no iniciado · ◐ en curso · ⊗ bloqueado · ✔ entregado y rev
 | 6 | 90 | | | |
 | 7 | 90 | | | |
 | 8 | 90 | | | |
-| 💰 hito | 30 | | | mes de ingresos, estudio en mantenimiento |
+| 💰 hito | 30 | | | mes de ingresos, estudio en mantenimiento · **adelantado a noviembre 2026 por el ciclo contractual** |
 | 9 | 90 | | | |
 | 10 | 90 | | | |
 | 11 | 90 | | | |
@@ -80,14 +82,20 @@ Estados: ☐ no iniciado · ◐ en curso · ⊗ bloqueado · ✔ entregado y rev
 > ⚠️ **Regla activa: el tutor no genera código en toda esta fase.** Solo revisa, explica y da pistas.
 
 ### Mes 1 — Python + SQL + Git en paralelo
-`Horas: ___/90` · `Inicio: ____` · `Fin: ____`
+`Horas: 36/90` · `Inicio: 2026-09-01` · `Fin: ____`
 - [ ] **Python 60%** — CS50P: variables, tipos, strings, listas, diccionarios, condicionales, loops, funciones, excepciones, archivos, debugging
+  - Lectures 0-2 vistas · PSets 0, 1 y 2 completos y en verde en check50 · **falta: excepciones, archivos, debugging** · cierre condicionado al quiz de verificación
 - [ ] **SQL 30%** — Mode Analytics + SQLZoo: SELECT, WHERE, GROUP BY, HAVING, JOINs, agregaciones, alias, NULLs
+  - Basic SQL 15/15 · agregaciones cubiertas en **Postgres local** (tabla `cases` sintética), no en Mode · **falta: JOINs y NULLs** · cierre condicionado al quiz
 - [X] **Git 10%** — repos, commits, .gitignore, README, GitHub
 - [ ] 📦 **Proyecto 0 — Personal Finance Analyzer** (CSV → Python y CSV → PostgreSQL, mismas respuestas por dos caminos)
+  - Sin iniciar al cierre de S2. **Arrastrado a S3 como innegociable del mes.** Base ya lista: Postgres corriendo y carga de CSV verificada
 - [ ] ➕ **Problemática de investigación** — 1 página: problema real, con dueño y con costo. Guardar en el repo y releer al cierre de cada fase.
-- [ ] 💰 Crear `VALOR.md`. Registrar retroactivamente lo que ya hiciste en el trabajo (automatizaciones de Zapier/n8n, reportes, integraciones) con horas ahorradas estimadas
-- [ ] 💰 Averiguar el ciclo de presupuesto y de evaluación de desempeño del despacho. La conversación de aumento se agenda contra ese calendario, no contra el mes 9
+  - Sin candidatos. Arrastrado a S3
+- [X] 💰 Crear `VALOR.md`. Registrar retroactivamente lo que ya hiciste en el trabajo (automatizaciones de Zapier/n8n, reportes, integraciones) con horas ahorradas estimadas
+  - 2 entradas (SOL HubSpot↔Filevine · Policy Limits). Solo una cuantificada en horas; **ninguna convertida a dinero** — pendiente para el caso de negocio de noviembre
+- [X] 💰 Averiguar el ciclo de presupuesto y de evaluación de desempeño del despacho. La conversación de aumento se agenda contra ese calendario, no contra el mes 9
+  - **Noviembre 2026, al cumplir el año de antigüedad. Fijado por contrato**
 - [ ] Revisión de tutor cerrada
 
 "arranque martes; semana 1 en setup de entorno y terminal".
@@ -178,7 +186,9 @@ Estados: ☐ no iniciado · ◐ en curso · ⊗ bloqueado · ✔ entregado y rev
 > **Mes dedicado, no paralelo.** Estudio en modo mantenimiento (1h/día máximo). Las otras 2h van a la conversación de tarifa, postulaciones, entrevistas y negociación.
 > Playbook completo en `TRACK_INGRESOS.md`.
 
-`Fecha objetivo: ____` · `Ciclo de presupuesto del despacho: ____`
+`Fecha objetivo: noviembre 2026` · `Ciclo de presupuesto del despacho: noviembre, al cumplir el año de antigüedad (contractual)`
+
+> ⚠️ **Conflicto detectado el 2026-09-13.** El ciclo contractual cae en el **mes 3** de la ruta, no entre el 8 y el 9. La conversación de evaluación ocurre en noviembre exista o no el portafolio. Consecuencia: la **Vía A** se ejecuta con lo que haya listo para finales de octubre — `VALOR.md` con 3 impactos cuantificados **en dinero**, Proyecto 0 y Proyecto 1 entregados, y un número de mercado verificado. Las Vías B y C se mantienen en su sitio original, después del mes 8. Decidir en el cierre del mes 1 si esto altera el alcance de los meses 2 y 3.
 
 **Disparador real:** no es el calendario, es tener (a) los proyectos 2-5 entregados, (b) `VALOR.md` con al menos tres impactos cuantificados y (c) un número de mercado verificado. Si eso se cumple en el mes 6, adelántalo. Si no se cumple en el mes 8, no lo fuerces.
 

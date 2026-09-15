@@ -22,8 +22,6 @@
 
 ## Abiertos
 
-## Abiertos
-
 ### [09-02] Mes 1 — El espacio es un separador de argumentos en el shell
 **Qué creía:** que un nombre de carpeta se escribe tal cual se ve en el Finder.
 **Qué es en realidad:** el shell parte la línea por los espacios y trata cada
@@ -65,7 +63,9 @@ devuelve `None` aunque haya calculado correctamente.
 parte decimal antes de seguir operando. Hay que convertir a decimal antes de
 dividir, o reordenar la operación. Multiplicar después no recupera lo perdido.
 **Dónde apareció:** Mode Basic SQL, ejercicio de porcentajes por región.
-**Estado:** ◐ abierto
+**Estado:** ◐ abierto — *ejercicio de porcentajes declarado resuelto y verificado en
+dos casos (`google`, `facebook`) el 09-13, sin evidencia vista por el tutor. Resolver
+el ejercicio el día de la corrección no califica: se marca ✔ en el quiz de cierre de mes.*
 
 ### [09-06] Mes 1 — Nombrar variables como funciones incorporadas las oculta
 **Qué creía:** que `bool`, `list`, `str`, `type` eran palabras libres para usar como
@@ -81,18 +81,63 @@ el error aparece después, cuando intento usarlas como función.
 **Qué es en realidad:** `nombre(...)` ejecuta una función. Sobre una variable da
 TypeError; sobre una función sin ellos obtengo la función misma, no su resultado.
 Las llaves de un f-string marcan dónde va un valor, no llaman a nada.
-**Dónde apareció:** discount.py, mes 1.
+**Dónde apareció:** discount.py, mes 1. **Reapareció el 09-13 en Deep Thought
+("Great Question"), pset 1** — segunda aparición, no resuelto.
+**Estado:** ◐ abierto
+
+### [09-13] Mes 1 — Reasignar sobre un método que muta y devuelve `None`
+**Qué creía:** que `lista = lista.append(x)` era la forma correcta de añadir un
+elemento y quedarme con la lista actualizada.
+**Qué es en realidad:** `.append()` modifica la lista en el sitio y devuelve `None`.
+Al asignar ese `None` sobre el nombre, destruyo la lista que acababa de actualizar.
+Es el espejo del patrón ya abierto: allí el error es **no recoger** lo que sí se
+devolvió; aquí es **recoger** lo que nunca se devolvió. La pregunta que separa los
+dos casos es una sola: ¿este método devuelve un valor nuevo o modifica el objeto?
+Lo mismo aplica a `.sort()`, `.reverse()` y `.extend()`.
+**Dónde apareció:** ejercicios de listas, semana 2. Relacionado: reiniciar
+`total = 0` dentro del loop en vez de antes — el acumulador se borra en cada vuelta
+y el resultado final es solo la última iteración.
+**Estado:** ◐ abierto
+
+### [09-13] Mes 1 — Sintaxis válida, dato o columna equivocados
+**Qué creía:** que si el código corre sin error y devuelve un resultado con forma
+razonable, está bien.
+**Qué es en realidad:** el intérprete y el motor SQL validan la forma, no el
+significado. Un programa puede estar perfectamente escrito y responder una pregunta
+distinta de la del enunciado, y no hay ninguna señal de error: la única verificación
+posible es contrastar contra un caso cuyo resultado conozco de antemano.
+**Dónde apareció:** dos veces el mismo día — Plates (`s[i].isalpha()` bien escrito
+pero con la lógica invertida) y SQL (`risk_level` calculado sobre `settlement_amount`
+en vez de `policy_limit`).
+**Estado:** ◐ abierto
+
+### [09-13] Mes 1 — El orden de un `print` respecto a la condición de corte no es neutro
+**Qué creía:** que mientras el resultado final fuera correcto, dónde colocara la
+salida dentro del loop daba igual.
+**Qué es en realidad:** el `print` no reporta el estado final, reporta el estado en
+el instante en que se ejecuta. Imprimir antes de evaluar la condición de corte
+muestra un estado que el programa nunca debió exponer. Lo que el usuario ve es
+parte de la salida, no un adorno del cálculo.
+**Dónde apareció:** coke.py, pset 2 — `Amount Due` negativo antes de cortar.
 **Estado:** ◐ abierto
 
 ## Resueltos
+
+*(vacío — ninguno ha pasado todavía por un quiz posterior)*
 
 ---
 
 ## Patrones recurrentes
 
->- **Calcular no es entregar.** Cuatro entradas distintas (métodos de string, asignar
-  vs. devolver, paréntesis de llamada, y en parte los builtins) son variantes de lo
-  mismo: una expresión que produce un valor lo pierde si nadie lo recoge con `=` o
-  con `return`. Python no avisa. Revisar en el quiz del cierre de mes 1.
+- **Calcular no es entregar.** Cinco entradas son variantes de lo mismo: métodos de
+  string, asignar vs. devolver, paréntesis de llamada, builtins ocultos, y ahora
+  `.append()` por el lado contrario. Una expresión que produce un valor lo pierde si
+  nadie lo recoge; y un método que no produce valor destruye lo que tenía si lo
+  recojo igual. Python no avisa en ninguno de los dos casos. **Eje central del quiz
+  de cierre del mes 1.**
 
--
+- **El programa corre ≠ el programa responde la pregunta.** Dos entradas nuevas —
+  dato equivocado, y orden del `print` — comparten raíz: verifico contra el
+  intérprete, no contra el enunciado. Contramedida: antes de dar por terminado un
+  ejercicio, escribir a mano el resultado esperado de un caso y compararlo. Es el
+  germen de lo que en el mes 5 se llama test de validación de entrada.

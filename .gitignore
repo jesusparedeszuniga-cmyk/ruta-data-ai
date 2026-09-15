@@ -216,3 +216,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# DS Store / data raw
+.DS_Store
+data/raw/
+
+# CSV exercises
+cases_export.csv
