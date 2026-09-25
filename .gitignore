@@ -228,3 +228,5 @@ cases_export.csv
 projects/project-0-finance-analyzer/data/raw/
 projects/project-0-finance-analyzer/output/
 
+# Output Exercise
+python-exercises/mes-01/output.csv
