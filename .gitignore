@@ -223,3 +223,8 @@ data/raw/
 
 # CSV exercises
 cases_export.csv
+
+# Project 0
+projects/project-0-finance-analyzer/data/raw/
+projects/project-0-finance-analyzer/output/
+
